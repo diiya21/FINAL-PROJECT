@@ -1,0 +1,192 @@
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    margin: 0;
+    background-color: black;
+}
+
+nav{ 
+    background-color: black;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    ul{
+        padding-left: 0;
+        li{
+        display: inline;
+        font-weight: bold;
+        padding: 1em;
+            a{
+                color: white;;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+#home, #gallery, #blog{
+    height: 100vh;
+    h2{
+        color: white;
+    }
+}
+
+#home{
+    background-image: url("https://th.bing.com/th/id/R.b98c0aee17d3ac2069ee86dad797f7b9?rik=mLebhEKsEH7Shg&riu=http%3a%2f%2fwww.pixelstalk.net%2fwp-content%2fuploads%2f2016%2f05%2fFree-Black-And-White-Wallpapers-Download.jpg&ehk=8w3hyuDb84ADkihZIrt4FIKBlbXsQSovgl91TizcR6Q%3d&risl=&pid=ImgRaw&r=0)");
+    background-size: cover;
+    div{
+        text-align: center;
+        padding: 0.5em;
+        h1{
+            color: white;
+            text-shadow: 4px 4px 2px black;
+            padding-top: 3em;
+            font-size: 3em;
+        }
+        span{
+            color: white;
+            text-shadow: 4px 4px 2px black; 
+            font: small-caption;
+            font-size: large;
+            font-weight: 600;
+        }
+        article{
+            padding-top: 2%;
+            a{
+                color: white;
+                background: rgb(83, 79, 79);
+                padding: 0.5em;
+            }
+        }
+    }
+}
+
+.gallery-images{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    img{
+        height: 30vh;
+        width: 20vw;
+        cursor: pointer;
+        transition: transform 0.2s;
+    }
+    img:hover{
+        transform: scale(1.1);
+        cursor: zoom-in;
+    }
+}
+
+#blog{
+    .blog-content{
+        display: flex;
+        justify-content: space-between;
+        margin: 2em;
+        height: fit-content;
+    }
+    #blog-1, #blog-2{
+        padding: 0.5em;
+        width: 48%;
+        box-sizing: border-box;
+        border: 2px solid white;
+        box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;    }
+    p{
+    color: white;
+    }
+    img{
+        height: fit-content;
+        width: 100%;
+    }
+}
+
+#contact{
+    color: white;
+    height: fit-content;
+    p{
+        text-align: center;
+    }
+    input[type=text], select, textarea{
+        width: 100%;
+        padding: 1em;
+        border: 1px solid darkgray;
+        resize: vertical;
+    }
+    input[type=submit]{
+        background-color: white;
+        color: black;
+        padding: 1em 0.5em;
+        border: none;
+        cursor: pointer;
+    }
+    input[type=submit]:hover{
+        background-color: darkgray;
+    }
+    img{
+        width: 100%;
+    }
+    .column{
+        float: left;
+        width: 50%;
+        margin-top: 2em;
+        padding: 0.5em;
+    }
+    .row:after{
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+
+footer {
+    background-color: rgba(34, 33, 33, 0.765);
+    color: white;
+    text-align: center;
+    padding: 1em;
+}
+
+@media screen and (max-width: 425px){
+//mobile view
+
+    nav{
+        background-color: rgb(55, 54, 54);
+        width: 100vw;
+        position: fixed;
+        top: 0;
+    }
+
+    #gallery{
+        height: fit-content;
+        .gallery-images{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(12, 1fr);
+        img{
+            height: 1fr;
+            width: 100vw;
+        }
+        }
+    }
+    
+    #blog{
+        height: fit-content;
+        .blog-content{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        height: fit-content;
+        width: 100vw;
+        max-width: 100%; 
+        padding: 1em; 
+        margin: 0;
+        box-sizing: border-box;
+        #blog-1, #blog-2{
+            padding: 0.5em;
+            width: 100%;
+            margin-top: 0.5em;
+        }
+        }
+    }
+}
+

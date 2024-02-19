@@ -1,0 +1,191 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background-color: black;
+}
+
+nav {
+  background-color: black;
+  width: 100%;
+  position: fixed;
+  top: 0;
+}
+nav ul {
+  padding-left: 0;
+}
+nav ul li {
+  display: inline;
+  font-weight: bold;
+  padding: 1em;
+}
+nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+#home, #gallery, #blog {
+  height: 100vh;
+}
+#home h2, #gallery h2, #blog h2 {
+  color: white;
+}
+
+#home {
+  background-image: url("https://th.bing.com/th/id/R.b98c0aee17d3ac2069ee86dad797f7b9?rik=mLebhEKsEH7Shg&riu=http%3a%2f%2fwww.pixelstalk.net%2fwp-content%2fuploads%2f2016%2f05%2fFree-Black-And-White-Wallpapers-Download.jpg&ehk=8w3hyuDb84ADkihZIrt4FIKBlbXsQSovgl91TizcR6Q%3d&risl=&pid=ImgRaw&r=0)");
+  background-size: cover;
+}
+#home div {
+  text-align: center;
+  padding: 0.5em;
+}
+#home div h1 {
+  color: white;
+  text-shadow: 4px 4px 2px black;
+  padding-top: 3em;
+  font-size: 3em;
+}
+#home div span {
+  color: white;
+  text-shadow: 4px 4px 2px black;
+  font: small-caption;
+  font-size: large;
+  font-weight: 600;
+}
+#home div article {
+  padding-top: 2%;
+}
+#home div article a {
+  color: white;
+  background: rgb(83, 79, 79);
+  padding: 0.5em;
+}
+
+.gallery-images {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+}
+.gallery-images img {
+  height: 30vh;
+  width: 20vw;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+.gallery-images img:hover {
+  transform: scale(1.1);
+  cursor: zoom-in;
+}
+
+#blog .blog-content {
+  display: flex;
+  justify-content: space-between;
+  margin: 2em;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+#blog #blog-1, #blog #blog-2 {
+  padding: 0.5em;
+  width: 48%;
+  box-sizing: border-box;
+  border: 2px solid white;
+  box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+}
+#blog p {
+  color: white;
+}
+#blog img {
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 100%;
+}
+
+#contact {
+  color: white;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+#contact p {
+  text-align: center;
+}
+#contact input[type=text], #contact select, #contact textarea {
+  width: 100%;
+  padding: 1em;
+  border: 1px solid darkgray;
+  resize: vertical;
+}
+#contact input[type=submit] {
+  background-color: white;
+  color: black;
+  padding: 1em 0.5em;
+  border: none;
+  cursor: pointer;
+}
+#contact input[type=submit]:hover {
+  background-color: darkgray;
+}
+#contact img {
+  width: 100%;
+}
+#contact .column {
+  float: left;
+  width: 50%;
+  margin-top: 2em;
+  padding: 0.5em;
+}
+#contact .row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+footer {
+  background-color: rgba(34, 33, 33, 0.765);
+  color: white;
+  text-align: center;
+  padding: 1em;
+}
+
+@media screen and (max-width: 425px) {
+  nav {
+    background-color: rgb(55, 54, 54);
+    width: 100vw;
+    position: fixed;
+    top: 0;
+  }
+  #gallery {
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  #gallery .gallery-images {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(12, 1fr);
+  }
+  #gallery .gallery-images img {
+    height: 1fr;
+    width: 100vw;
+  }
+  #blog {
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  #blog .blog-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    height: -moz-fit-content;
+    height: fit-content;
+    width: 100vw;
+    max-width: 100%;
+    padding: 1em;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  #blog .blog-content #blog-1, #blog .blog-content #blog-2 {
+    padding: 0.5em;
+    width: 100%;
+    margin-top: 0.5em;
+  }
+}/*# sourceMappingURL=style.css.map */
