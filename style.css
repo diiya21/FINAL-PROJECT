@@ -4,11 +4,11 @@ html {
 
 body {
   margin: 0;
-  background-color: black;
+  background-color: darkred;
 }
 
 nav {
-  background-color: black;
+  background-color: darkred;
   width: 100%;
   position: fixed;
   top: 0;
@@ -30,7 +30,7 @@ nav ul li a {
   height: 100vh;
 }
 #home h2, #gallery h2, #blog h2 {
-  color: white;
+  color: rgb(221, 207, 207);
 }
 
 #home {
@@ -38,7 +38,7 @@ nav ul li a {
   background-size: cover;
 }
 #home div {
-  text-align: center;
+  text-align: right;
   padding: 0.5em;
 }
 #home div h1 {
